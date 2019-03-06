@@ -1,0 +1,9 @@
+ProjectTitle: jq-cabinet
+
+PageList:
+- file: homepage.html
+  ready: 20
+- file: arial.html
+  ready: 20
+- file: ptsans.html
+  ready: 20
