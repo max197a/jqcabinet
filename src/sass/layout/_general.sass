@@ -27,8 +27,8 @@ body, html
   // background: white
   background: #ffffff
   color: $fontColor
-  // font-family: 'PT Sans', Arial, sans-serif
-  font-family: Arial, sans-serif
+  font-family: 'PT Sans', Arial, sans-serif
+  // font-family: Arial, sans-serif
   font-size: 16px
   min-width: 320px
   max-width: 100%
@@ -37,13 +37,6 @@ body, html
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   letter-spacing: 0.3px
-
-.arial
-  font-family: Arial, sans-serif
-
-.ptsans
-  font-family: 'PT Sans', Arial, sans-serif
-  
 
 .page
   display: flex
@@ -55,25 +48,18 @@ body, html
     flex: 1 0 auto
     display: flex
     flex-direction: column
-    // header offset ex
-    padding-top: 141px
-    padding-bottom: 80px
+    padding-top: 90px
 
-+r($wide)
-  .page
-    &__content
-      padding-top: 106px
 
 +r($desktop)
   .page
     &__content
-      padding-top: 64px
+      padding-top: 66px
 
 +r($tablet)
   .page
     &__content
       padding-top: 55px
-      padding-bottom: 40px
 
 
 .container

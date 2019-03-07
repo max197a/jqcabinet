@@ -49,34 +49,149 @@
   &__log-image
     font-size: 0
     margin-left: 19px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    width: 50px
+    height: 50px
+    overflow: hidden
+    background: $green
+    transition: all $transitionSpeed $ease
+    &:hover
+      background: $greenHover
+    &-container
+      font-size: 0
     img
-      width: 50px
-      height: 50px
+      width: auto
+      height: 25px
+      margin-left: -3px
   &__name
     text-align: right
+
++r($desktop)
+  .header
+    &__logotype
+      img
+        width: 160px
+    &__menu-link
+      font-size: 17px
+      margin: 0 12px
+    &__log-image
+      width: 40px
+      height: 40px
+      margin-left: 15px
+      img
+        height: 18px
 
 +r($tablet)
   .header
     &__wrapper
       padding: 15px 0
+      justify-content: center
+      position: relative
+      z-index: 4
+      &.is-active
+        .header__menu
+          transform: translateX(0)
+          opacity: 1
+        .header__log-out
+          transform: translateX(0)
+          opacity: 1
+          transition: all 0.5s $ease
+        .header__menu-link
+          opacity: 1
+          transform: translateX(0)
+    &__logotype
+      position: relative
+      z-index: 4
+      img
+        height: 20px
+        width: auto
+        &.desktop
+          display: none
+        &.mobile
+          display: block
+    &__menu
+      height: calc(100vh - 50px)
+      position: absolute
+      background: #fff
+      width: calc(100% + 40px)
+      z-index: 1
+      top: 50px
+      left: -20px
+      padding: 40px
+
+      transition: all $transitionSpeed $ease
+      transform: translateX(101%)
+      // opacity: 0
+    &__menu-link
+      width: 100%
+      display: block
+      margin: 0 0 24px 0
+      font-size: 18px
+      opacity: 0
+      transform: translateX(101%)
+      transition: all 0.5s $ease
+    &__log-out
+      position: absolute
+      top: 240px
+      z-index: 4
+      left: -20px
+      text-align: left
+      width: 100%
+      padding-left: 40px
+      justify-content: flex-start
+      transition: all $transitionSpeed $ease
+      transform: translateX(101%)
+      opacity: 0
+      &:before
+        position: absolute
+        display: block
+        content: ''
+        width: 80px
+        height: 1px
+        background: #ececec
+        top: -20px
+        left: 40px
+    &__name
+      text-align: left
+    &__log-image
+      margin-left: auto
+      margin-right: -20px
     .hamburger
       display: block
       order: 4
       padding: 0
       margin-right: 0px
-      width: 30px
-      height: 24px
+      width: 18px
+      height: 16px
       opacity: 1
-      // position: absolute
-      position: static
+      position: absolute
+      z-index: 4
+      right: 0px
+      // outline: 1px solid red
+      overflow: hidden
       .hamburger-inner
         border-radius: 0
-        background: #904c96
-        width: 30px
+        background: #000
+        width: 18px
+        height: 2px
+        top: 4px
         &:before,
         &:after
           border-radius: 0
-          background: #904c96
+          background: #000
           width: 100%
+          height: 2px
+          width: 18px
         &:before
-          width: 30px
+          top: 6px
+        &:after
+          top: 12px
+      &.is-active
+        .hamburger-inner
+          top: -1px
+          &:after
+            top: 20px
+            left: 0px

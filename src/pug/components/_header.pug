@@ -1,6 +1,6 @@
 // HEADER :: START
-section#section-top
-header.header.arial
+
+header.header
   .container
     .header__wrapper
       a.header__logotype(href="#")
@@ -15,9 +15,10 @@ header.header.arial
           p Константин
           p Константинопольский
         a.header__log-image(href="#")
-          img(src="img/log-out.png", alt="")
-
-        
-      
+          .header__log-image-container
+            img(src="img/log-out.svg", alt="")
+      .hamburger.hamburger--slider(js-hamburger)
+        .hamburger-box
+          .hamburger-inner
 
 // HEADER :: END
