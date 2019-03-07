@@ -29,6 +29,7 @@ body, html
   color: $fontColor
   font-family: 'PT Sans', Arial, sans-serif
   // font-family: Arial, sans-serif
+  color: #000
   font-size: 16px
   min-width: 320px
   max-width: 100%
@@ -49,17 +50,20 @@ body, html
     display: flex
     flex-direction: column
     padding-top: 90px
+    padding-bottom: 100px
 
 
 +r($desktop)
   .page
     &__content
       padding-top: 66px
+      padding-bottom: 75px
 
 +r($tablet)
   .page
     &__content
       padding-top: 55px
+      padding-bottom: 50px
 
 
 .container
