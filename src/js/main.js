@@ -39,6 +39,28 @@ $(document).ready(function() {
       .toggleClass("is-active");
   });
 
+  // CURRENCY TOGGLER
+  _document.on("click", ".filter__currency a", function() {
+    $(".filter__currency a").removeClass("is-active");
+    $(this).toggleClass("is-active");
+  });
+
+  // FILTER FOCUS DROPDOWN
+  _document.on("focus", "[js-focus]", function() {
+    $(".filter__row--double").removeClass("is-active");
+    $(this)
+      .closest(".filter__row--double")
+      .addClass("is-active");
+  });
+
+  // FILTER REMOVE CLASS IS ACTIVE WHEN FOCUS ANOTHER ELEMENT
+
+  _document.on("click", function(e) {
+    if (!$(e.target).closest(".filter__row--double").length > 0) {
+      $(".filter__row--double").removeClass("is-active");
+    }
+  });
+
   ////////////////////
   // SHOW PASSWORD TOGGLE
   ////////////////////

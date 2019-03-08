@@ -4,11 +4,682 @@ title: jq-cabinet
 extends shared/_layout
 block content
 
-  // BEGIN SECTION :: firstscreen
-  section.firstscreen
+  // BEGIN SECTION :: filter
+  section.filter
     .container
-      h1 Заголовок h1
-      br
-      h2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab fuga porro velit! A voluptatem sed reiciendis eum accusantium aspernatur deleniti temporibus, nesciunt id repudiandae mollitia ipsum debitis modi vero corrupti!
-  
-  // END SECTION :: firstscreen
+      .filter__grid
+        .filter__sidebar
+          .filter__sidebar-item
+            p Тип сделки
+            .filter__sidebar-checkboxes
+              .input-checkbox
+                label Продажа
+                  input(type='checkbox', checked='checked')
+                  span.checkmark
+              .input-checkbox
+                label Аренда
+                  input(type='checkbox')
+                  span.checkmark
+          .filter__sidebar-item.filter__sidebar-item--direction
+            p Направление
+            .input-checkbox
+              label Рублёво-Успенское
+                input(type='checkbox')
+                span.checkmark
+            .input-checkbox
+              label Новорижское
+                input(type='checkbox')
+                span.checkmark
+            .input-checkbox
+              label Ильинское
+                input(type='checkbox')
+                span.checkmark
+            .input-checkbox
+              label Минское
+                input(type='checkbox')
+                span.checkmark
+            .input-checkbox
+              label Киевское
+                input(type='checkbox')
+                span.checkmark
+            .input-checkbox
+              label Калужское
+                input(type='checkbox')
+                span.checkmark
+            .input-checkbox
+              label Пятницкое
+                input(type='checkbox')
+                span.checkmark
+            a.filter__link(href="#") Показать все
+          .filter__sidebar-item.filter__sidebar-item--mkad
+            p От МКАД, км
+            .filter__row
+              .input-container
+                input(type="text" name="" placeholder="0")
+              span –
+              .input-container
+                input(type="text" name="" placeholder="30")
+          .filter__sidebar-item.filter__sidebar-item--location
+            p.no-border Локация / посёлок
+            .input-container
+              input(type="text" name="")
+          .filter__sidebar-item.filter__sidebar-item--location
+            p.no-border Номер дома / участка
+            .input-container
+              input(type="text" name="")
+
+        .filter__main
+          .filter__main-id
+            p.no-border ID объекта
+            .input-container
+              input(type="text" name="")
+          .filter__main-background
+            .filter__main-item
+              p Направление
+              .input-checkbox
+                label Дом
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Таунхаус
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Квартира
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Участок
+                  input(type='checkbox')
+                  span.checkmark
+
+            .filter__main-item
+              p Материал стен
+              .input-checkbox
+                label Кирпич
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Блоки
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Дерево
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Блюмакс
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Канадская
+                  input(type='checkbox')
+                  span.checkmark
+
+            .filter__main-item
+              p Тип участка
+              .input-checkbox
+                label Лесной
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Полевой
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Около воды
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Прилесной
+                  input(type='checkbox')
+                  span.checkmark
+
+            .filter__main-item
+              p Стоимость
+              .filter__currency
+                a.is-active(href="#") ₽
+                a(href="#") $
+                a(href="#") €
+              .filter__input
+                .filter__row.filter__row--double
+                  .input-container
+                    input(type="text" name="" placeholder="0" js-focus)
+                  span –
+                  .input-container
+                    input(type="text" name="" placeholder="30" js-focus)
+                  .filter__dropdown
+                    .filter__dropdown-list
+                      a.disable(href="#") 0
+                      a(href="#") 30
+                      a(href="#") 50
+                      a(href="#") 75
+                      a(href="#") 100
+                      a(href="#") 200
+                      a(href="#") 500
+                    .filter__dropdown-list
+                      a(href="#") 30
+                      a(href="#") 50
+                      a(href="#") 75
+                      a(href="#") 100
+                      a(href="#") 200
+                      a(href="#") 500
+                      a.disable(href="#") 1000+
+
+            .filter__main-item.filter__main-item--mobile-margin
+              p Площадь дома, м²
+              .filter__input
+                .filter__row.filter__row--double
+                  .input-container
+                    input(type="text" name="" placeholder="От" js-focus)
+                  span –
+                  .input-container
+                    input(type="text" name="" placeholder="До" js-focus)
+                  .filter__dropdown
+                    .filter__dropdown-list
+                      a.disable(href="#") 0
+                      a(href="#") 200
+                      a(href="#") 500
+                      a(href="#") 1000
+                      a(href="#") 1500
+                    .filter__dropdown-list
+                      a(href="#") 200
+                      a(href="#") 500
+                      a(href="#") 1000
+                      a(href="#") 1500
+                      a(href="#") 1500+
+
+
+            .filter__main-item.filter__main-item--mobile-margin
+              p Спальни, шт
+              .filter__input
+                .filter__row.filter__row--double
+                  .input-container
+                    input(type="text" name="" placeholder="От" js-focus)
+                  span –
+                  .input-container
+                    input(type="text" name="" placeholder="До" js-focus)
+                  .filter__dropdown
+                    .filter__dropdown-list
+                      a(href="#") 1
+                      a(href="#") 2
+                      a(href="#") 3
+                      a(href="#") 4
+                      a(href="#") 5
+                    .filter__dropdown-list
+                      a(href="#") 1
+                      a(href="#") 2
+                      a(href="#") 3
+                      a(href="#") 4
+                      a(href="#") 5+
+                    
+              
+            .filter__main-item.filter__main-item--mobile-margin
+              p Площадь участка, м²
+              .filter__input
+                .filter__row.filter__row--double
+                  .input-container
+                    input(type="text" name="" placeholder="От" js-focus)
+                  span –
+                  .input-container
+                    input(type="text" name="" placeholder="До" js-focus)
+                  .filter__dropdown
+                    .filter__dropdown-list
+                      a.disable(href="#") 0
+                      a(href="#") 200
+                      a(href="#") 500
+                      a(href="#") 1000
+                      a(href="#") 1500
+                    .filter__dropdown-list
+                      a(href="#") 200
+                      a(href="#") 500
+                      a(href="#") 1000
+                      a(href="#") 1500
+                      a(href="#") 1500+
+
+            .filter__main-item
+              p Мебель
+              .input-checkbox
+                label Есть
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Частично
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Отсутствует
+                  input(type='checkbox')
+                  span.checkmark
+
+            .filter__main-item
+              p Отделка
+              .input-checkbox
+                label Под ключ
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Частично под ключ
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Под чистовую отделку
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Под черновую отделку
+                  input(type='checkbox')
+                  span.checkmark
+
+            .filter__main-item
+              p Дополнительно
+              .input-checkbox
+                label Бассейн
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Гараж
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Помещение для персонала
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Охраняемый
+                  input(type='checkbox')
+                  span.checkmark
+
+            .filter__main-item
+              p Статус
+              .input-checkbox
+                label Опубликован
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Отложен
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Закрытая продажа
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Черновик
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Сдан
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Продан
+                  input(type='checkbox')
+                  span.checkmark
+              .input-checkbox
+                label Архив
+                  input(type='checkbox')
+                  span.checkmark
+
+            .filter__main-item
+              //- пустой элемент нужен для сетки
+          
+      .filter__grid.filter__grid--bottom
+        .filter__sidebar
+          .filter__sidebar-item
+            a.filter__link.filter__link--show-filter(href="#") Показать фильтр
+              img(src="img/icon-filter.svg", alt="")
+        .filter__main
+          .filter__main-buttons
+            .filter__main-select
+              select(name="")
+                option(value="#") Сначала дешёвые
+                option(value="#") Сначала дорогие
+            .filter__main-button
+              a.btn(href="#") Показать объекты
+            .filter__main-link
+              a.filter__link(href="#") Сбросить
+
+  // END SECTION :: filter
+
+  // BEGIN SECTION :: main
+  section.main
+    .container
+      .main__grid
+        .main__item.main__item--pdf.main__item--green-status
+          a.main__item-id(href="#") ID 
+            span 15767
+          a.main__item-container(href="#")
+            .main__image
+              img(src="img/item-1.jpg", alt="")
+              p.main__pdf PDF
+            .main__info
+              .main__price
+                .main__price-item
+                  p Продажа
+                  p.price $120 000 000
+                .main__price-item
+                  p Аренда
+                  p.price $100 000
+              .main__title
+                p Дом в «Раздоры-2», 4 км
+                p.description Рублёво-Успенское шоссе, 5 км
+              .main__info-grid
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-nature.svg", alt="")
+                  p 6.728 сот
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-house.svg", alt="")
+                  p 800 м²
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-bed.svg", alt="")
+                  p 5 спален
+            .main__bottom
+              .main__bottom-info
+                .main__bottom-image
+                  img(src="img/icon-key.svg", alt="")
+                p Под чистовую отделку
+              p.main__status Опубликован
+        .main__item.main__item--pdf.main__item--green-status
+          a.main__item-id(href="#") ID 
+            span 15767
+          a.main__item-container(href="#")
+            .main__image
+              img(src="img/item-2.jpg", alt="")
+              p.main__pdf PDF
+            .main__info
+              .main__price
+                .main__price-item
+                  p Продажа
+                  p.price $195 000 000
+                .main__price-item
+                  p Аренда
+                  p.price $95 000
+              .main__title
+                p Дом в «Ренессанс парк», 19 км
+                p.description Рублёво-Успенское шоссе, 5 км
+              .main__info-grid
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-nature.svg", alt="")
+                  p 15 сот
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-house.svg", alt="")
+                  p 1200 м²
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-bed.svg", alt="")
+                  p 4 спальни
+            .main__bottom
+              .main__bottom-info
+                .main__bottom-image
+                  img(src="img/icon-key.svg", alt="")
+                p Под чистовую отделку
+              p.main__status Закрытая продажа
+        .main__item.main__item--green-status
+          a.main__item-id(href="#") ID 
+            span 152767
+          a.main__item-container(href="#")
+            .main__image
+              img(src="img/item-3.jpg", alt="")
+              p.main__pdf PDF
+            .main__info
+              .main__price
+                .main__price-item
+                  p Продажа
+                  p.price $2 195 000 000
+                .main__price-item
+                  p Аренда
+                  p.price $95 000
+              .main__title
+                p Дом в «Ренессанс парк», 19 км
+                p.description Рублёво-Успенское шоссе, 5 км
+              .main__info-grid
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-nature.svg", alt="")
+                  p 115 сот
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-house.svg", alt="")
+                  p 900 м²
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-bed.svg", alt="")
+                  p 8 спален
+            .main__bottom
+              .main__bottom-info
+                .main__bottom-image
+                  img(src="img/icon-key.svg", alt="")
+                p Под чистовую отделку
+              p.main__status Опубликован
+        .main__item.main__item--red-status
+          a.main__item-id(href="#") ID 
+            span 15767
+          a.main__item-container(href="#")
+            .main__image
+              img(src="img/item-4.jpg", alt="")
+              p.main__pdf PDF
+            .main__info
+              .main__price
+                .main__price-item
+                  p Продажа
+                  p.price $120 000 000
+                .main__price-item
+                  p Аренда
+                  p.price $100 000
+              .main__title
+                p Дом в «Раздоры-2», 4 км Название в 2 строки
+                p.description Рублёво-Успенское шоссе, 5 км
+              .main__info-grid
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-nature.svg", alt="")
+                  p 6.728 сот
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-house.svg", alt="")
+                  p 800 м²
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-bed.svg", alt="")
+                  p 5 спален
+            .main__bottom
+              .main__bottom-info
+                .main__bottom-image
+                  img(src="img/icon-key.svg", alt="")
+                p Под чистовую отделку
+              p.main__status Продан
+        .main__item.main__item--yellow-status
+          a.main__item-id(href="#") ID 
+            span 15767
+          a.main__item-container(href="#")
+            .main__image
+              img(src="img/item-5.jpg", alt="")
+              p.main__pdf PDF
+            .main__info
+              .main__price
+                .main__price-item
+                  p Продажа
+                  p.price $195 000 000
+                .main__price-item
+                  p Аренда
+                  p.price $95 000
+              .main__title
+                p Дом в «Ренессанс парк», 19 км
+                p.description Рублёво-Успенское шоссе, 5 км Описание Описание в 2 строки
+              .main__info-grid
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-nature.svg", alt="")
+                  p 15 сот
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-house.svg", alt="")
+                  p 1200 м²
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-bed.svg", alt="")
+                  p 4 спальни
+            .main__bottom
+              .main__bottom-info
+                .main__bottom-image
+                  img(src="img/icon-key.svg", alt="")
+                p Под чистовую отделку
+              p.main__status Отложен
+        .main__item.main__item--green-status
+          a.main__item-id(href="#") ID 
+            span 152767
+          a.main__item-container(href="#")
+            .main__image
+              img(src="img/item-6.jpg", alt="")
+              p.main__pdf PDF
+            .main__info
+              .main__price
+                .main__price-item
+                  p Продажа
+                  p.price $2 195 000 000
+                .main__price-item
+                  p Аренда
+                  p.price $95 000
+              .main__title
+                p Дом в «Раздоры-2», 4 км
+                p.description Рублёво-Успенское шоссе, 5 км
+              .main__info-grid
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-nature.svg", alt="")
+                  p 115 сот
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-house.svg", alt="")
+                  p 900 м²
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-bed.svg", alt="")
+                  p 8 спален
+            .main__bottom
+              .main__bottom-info
+                .main__bottom-image
+                  img(src="img/icon-key.svg", alt="")
+                p Под чистовую отделку
+              p.main__status Опубликован
+        .main__item.main__item--green-status
+          a.main__item-id(href="#") ID 
+            span 15767
+          a.main__item-container(href="#")
+            .main__image
+              img(src="img/item-7.jpg", alt="")
+              p.main__pdf PDF
+            .main__info
+              .main__price
+                .main__price-item
+                  p Продажа
+                  p.price $120 000 000
+                .main__price-item
+                  p Аренда
+                  p.price $100 000
+              .main__title
+                p Дом в «Раздоры-2», 4 км  Название в 2 строки
+                p.description Рублёво-Успенское шоссе, 5 км Описание Описание в 2 строки 
+              .main__info-grid
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-nature.svg", alt="")
+                  p 6.728 сот
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-house.svg", alt="")
+                  p 800 м²
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-bed.svg", alt="")
+                  p 5 спален
+            .main__bottom
+              //- .main__bottom-info
+              //-   .main__bottom-image
+              //-     img(src="img/icon-key.svg", alt="")
+              //-   p Под чистовую отделку
+              p.main__status Продан
+        .main__item.main__item--green-status
+          a.main__item-id(href="#") ID 
+            span 15767
+          a.main__item-container(href="#")
+            .main__image
+              img(src="img/item-8.jpg", alt="")
+              p.main__pdf PDF
+            .main__info
+              .main__price
+                .main__price-item
+                  p Продажа
+                  p.price $195 000 000
+                .main__price-item
+                  p Аренда
+                  p.price $95 000
+              .main__title
+                p Дом в «Ренессанс парк», 19 км
+                p.description Рублёво-Успенское шоссе, 5 км
+              .main__info-grid
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-nature.svg", alt="")
+                  p 15 сот
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-house.svg", alt="")
+                  p 1200 м²
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-bed.svg", alt="")
+                  p 4 спальни
+            .main__bottom
+              //- .main__bottom-info
+              //-   .main__bottom-image
+              //-     img(src="img/icon-key.svg", alt="")
+              //-   p Под чистовую отделку
+              p.main__status Опубликован
+        .main__item.main__item--green-status
+          a.main__item-id(href="#") ID 
+            span 152767
+          a.main__item-container(href="#")
+            .main__image
+              img(src="img/item-9.jpg", alt="")
+              p.main__pdf PDF
+            .main__info
+              .main__price
+                .main__price-item
+                  p Продажа
+                  p.price $2 195 000 000
+                .main__price-item
+                  p Аренда
+                  p.price $95 000
+              .main__title
+                p Дом в «Ренессанс парк», 19 км
+                p.description Рублёво-Успенское шоссе, 5 км
+              .main__info-grid
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-nature.svg", alt="")
+                  p 115 сот
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-house.svg", alt="")
+                  p 900 м²
+                .main__info-item
+                  .main__info-image
+                    img(src="img/icon-bed.svg", alt="")
+                  p 8 спален
+            .main__bottom
+              //- .main__bottom-info
+              //-   .main__bottom-image
+              //-     img(src="img/icon-key.svg", alt="")
+              //-   p Под чистовую отделку
+              p.main__status Опубликован
+      .main__button
+        a.btn(href="#") Показать ещё
+
+  // END SECTION :: main

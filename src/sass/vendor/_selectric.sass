@@ -10,11 +10,11 @@
   width: 100%
 
 .selectric
-  border: 1px solid #c4c4c4
-  // border-radius: 0px
+  border: 1px solid #cccccc
   background: #fff
   position: relative
   overflow: hidden
+  border-radius: 3px
   .label
     display: block
     white-space: nowrap
@@ -25,7 +25,7 @@
     line-height: 1
     // font-family: $medium
     color: $fontColor
-    padding: 9px 10px 9px
+    padding: 12px 5px
     -webkit-user-select: none
     -moz-user-select: none
     -ms-user-select: none
@@ -37,19 +37,40 @@
   .button
     display: block
     position: absolute
-    right: 11px
-    top: 50%
-    transform: translateY(-65%) rotate(45deg)
-    width: 8px
-    height: 8px
-    border: 2px solid $bgpink
-    border-top: none
-    border-left: none
+    right: 0px
+    top: 0
+    width: 28px
+    height: 100%
     color: transparent
     font-size: 0
     text-align: center
     transform-origin: center center
     transition: all $transitionSpeed $ease
+    &:before
+      display: block
+      content: ''
+      position: absolute
+      width: 5px
+      height: 5px
+      border: 2px solid $colorRed
+      transform: translateX(-50%) rotate(45deg)
+      border-right: none
+      border-bottom: none
+      left: 50%
+      top: 11px
+    &:after
+      display: block
+      content: ''
+      position: absolute
+      width: 5px
+      height: 5px
+      border: 2px solid $colorRed
+      transform: translateX(-50%) rotate(45deg)
+      border-left: none
+      border-top: none
+      left: 50%
+      top: 19px
+
 
 .selectric-focus .selectric
   border-color: #aaaaaa
@@ -59,8 +80,6 @@
 
   .selectric-items
     display: block
-  .button
-    transform: translateY(-35%) rotate(-135deg)
 
 .selectric-disabled
   filter: alpha(opacity = 50)
@@ -118,7 +137,7 @@
 .selectric-items
   display: none
   position: absolute
-  top: calc(100% - 1px)
+  // top: calc(100% - 1px)
   left: 0
   background: #E9E9E9
   z-index: 2
@@ -154,31 +173,9 @@
     color: $fontColor
     padding: 10px 10px 10px 24px
     background: #fff
-    &:after
-      display: inline-block
-      // margin-top: 5px
-      content: ''
-      min-width: 10px
-      height: 10px
-      position: static
-      margin-left: 8px
-      margin-top: -2px
-    &.down-arrow
-      &:after
-        background: url(../img/arrow-down.png) center center no-repeat
-        background-size: contain
-        filter: invert(97%)
-        -webkit-filter: invert(97%)
-    &.top-arrow
-      &:after
-        background: url(../img/arrow-down.png) center center no-repeat
-        background-size: contain
-        transform: rotate(180deg)
-        filter: invert(97%)
-        -webkit-filter: invert(97%)
     &.selected,
     &:hover
-      background: $bgpink
+      background: $colorRed
       color: #fff
       &.down-arrow
         &:after
