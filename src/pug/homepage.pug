@@ -7,7 +7,7 @@ block content
   // BEGIN SECTION :: filter
   section.filter
     .container
-      .filter__grid
+      .filter__grid.filter__grid--container
         .filter__sidebar
           .filter__sidebar-item
             p Тип сделки
@@ -53,12 +53,29 @@ block content
             a.filter__link(href="#") Показать все
           .filter__sidebar-item.filter__sidebar-item--mkad
             p От МКАД, км
-            .filter__row
+            .filter__row.filter__row--double
               .input-container
-                input(type="text" name="" placeholder="0")
+                input(type="text" name="" placeholder="0" js-focus)
               span –
               .input-container
-                input(type="text" name="" placeholder="30")
+                input(type="text" name="" placeholder="30" js-focus)
+              .filter__dropdown
+                .filter__dropdown-list
+                  a.disable(href="#") 0
+                  a(href="#") 5
+                  a(href="#") 10
+                  a(href="#") 25
+                  a(href="#") 50
+                  a(href="#") 75
+                  a(href="#") 100
+                .filter__dropdown-list
+                  a(href="#") 5
+                  a(href="#") 10
+                  a(href="#") 25
+                  a(href="#") 50
+                  a(href="#") 75
+                  a(href="#") 100
+                  a(href="#") 100+
           .filter__sidebar-item.filter__sidebar-item--location
             p.no-border Локация / посёлок
             .input-container
@@ -323,11 +340,16 @@ block content
 
             .filter__main-item
               //- пустой элемент нужен для сетки
-          
+
+  // END SECTION :: filter
+
+  // BEGIN SECTION :: buttons
+  section.buttons
+    .container
       .filter__grid.filter__grid--bottom
         .filter__sidebar
           .filter__sidebar-item
-            a.filter__link.filter__link--show-filter(href="#") Показать фильтр
+            a.filter__link.filter__link--show-filter(href="#" js-open-filter)  фильтр
               img(src="img/icon-filter.svg", alt="")
         .filter__main
           .filter__main-buttons
@@ -339,8 +361,7 @@ block content
               a.btn(href="#") Показать объекты
             .filter__main-link
               a.filter__link(href="#") Сбросить
-
-  // END SECTION :: filter
+  // END SECTION :: buttons
 
   // BEGIN SECTION :: main
   section.main

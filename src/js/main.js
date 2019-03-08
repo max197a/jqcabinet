@@ -61,6 +61,13 @@ $(document).ready(function() {
     }
   });
 
+  // OPEN FILTER + TOGGLE CLASS BUTTON
+
+  _document.on("click", "[js-open-filter]", function() {
+    $(".filter").toggleClass("closed");
+    $(this).toggleClass("closed");
+  });
+
   ////////////////////
   // SHOW PASSWORD TOGGLE
   ////////////////////

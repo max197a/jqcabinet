@@ -1,5 +1,14 @@
 .filter
-  padding-top: 28px
+  // padding-top: 28px
+  max-height: 4000px
+  overflow: hidden
+  transition: all 1s ease
+  // padding-top: 28px
+  &.closed
+    // padding-top: 0
+    // transition: all $transitionSpeed $ease
+    max-height: 0
+
   p
     margin-top: 30px
     line-height: 1
@@ -15,6 +24,8 @@
     display: flex
     align-items: flex-start
     justify-content: space-between
+    &--container
+      padding-top: 28px
   &__sidebar
     min-width: 190px
     max-width: 200px
@@ -109,6 +120,14 @@
     &--show-filter
       margin-left: 43px
       margin-top: 57px
+      position: relative
+      &.closed
+        &:before
+          content: 'Показать '
+      &:before
+        content: 'Скрыть '
+        position: static
+        display: inline
       img
         width: 25px
         height: auto
@@ -117,7 +136,7 @@
         top: 50%
         transform: translateY(-50%)
         transition: all $transitionSpeed $ease
-    &:before
+    &:after
       position: absolute
       display: block
       content: ''
@@ -128,7 +147,7 @@
       bottom: -1px
       transition: all $transitionSpeed $ease
     &:hover
-      &:before
+      &:after
         width: 100%
   &__main
     width: 100%
