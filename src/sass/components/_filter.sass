@@ -189,12 +189,15 @@
       margin-right: 50px
       .btn
         background: $green
+        border-color: $green
         width: 100%
         border-radius: 50px
         font-size: 19px
         padding: 13px
+        cursor: pointer
         &:hover
           background: $greenHover
+          border-color: $greenHover
     &-link
       .filter__link
         margin: 0
@@ -204,18 +207,23 @@
     justify-content: space-between
     margin-top: -1px
     padding-bottom: 7px
-    a
+    .input-radio
       width: 32%
-      text-align: center
-      display: inline-block
-      padding: 8px
-      border-radius: 50px
-      background: #fff
-      color: #687981
-      transition: all $transitionSpeed $ease
+      
       &.is-active
         background: #687981
         color: #fff
+      span
+        width: 100%
+        text-align: center
+        display: inline-block
+        padding: 8px
+        border-radius: 50px
+        background: #fff
+        color: #687981
+        transition: all $transitionSpeed $ease
+        cursor: pointer
+
 
 +r($desktop1068)
   .filter

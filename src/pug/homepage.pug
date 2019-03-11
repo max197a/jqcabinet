@@ -155,9 +155,18 @@ block content
             .filter__main-item
               p Стоимость
               .filter__currency
-                a.is-active(href="#") ₽
-                a(href="#") $
-                a(href="#") €
+                .input-radio
+                  label
+                    input(type='radio' name="currency")
+                    span ₽
+                .input-radio
+                  label
+                    input(type='radio' name="currency")
+                    span $
+                .input-radio
+                  label
+                    input(type='radio' name="currency")
+                    span €
               .filter__input
                 .filter__row.filter__row--double
                   .input-container
@@ -358,7 +367,7 @@ block content
                 option(value="#") Сначала дешёвые
                 option(value="#") Сначала дорогие
             .filter__main-button
-              a.btn(href="#") Показать объекты
+              button.btn Показать объекты
             .filter__main-link
               a.filter__link(href="#") Сбросить
   // END SECTION :: buttons
