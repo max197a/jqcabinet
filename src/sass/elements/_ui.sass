@@ -94,7 +94,8 @@
 
 
 // Checkbox
-.input-checkbox
+.input-checkbox,
+.input-checkbox--radio
   position: relative
   margin-bottom: 10px
   input
@@ -152,6 +153,30 @@
       transition: transform .25s ease
       transform: scale(0) rotate(45deg)
       z-index: 2
+
+.input-checkbox--radio
+  margin-bottom: 0
+  input
+    &:checked
+      ~ .checkmark
+          background-color: white
+          border: 1px solid #e1e1e1
+          &::after
+            transform: translate(-50%, -50%) scale(1)
+            opacity: 1
+  .checkmark
+    border-radius: 50%
+    &::after
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background: #ff4a48
+      border: none
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      opacity: 0
+      transition: all .25s ease
 
 // radiobutton
 .input-radio

@@ -3,17 +3,13 @@ $(document).ready(function() {
   // Global variables
   //////////
 
-  var _window = $(window);
   var _document = $(document);
-  var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing for anime.js
-  var lastClickEl;
 
   ////////////
   // READY - triggered when PJAX DONE
   ////////////
 
   // single time initialization
-  _window.on("resize", debounce(setBreakpoint, 200));
 
   function pageReady() {
     initSelectric();
@@ -79,27 +75,5 @@ $(document).ready(function() {
       disableOnMobile: false,
       nativeOnMobile: false
     });
-  }
-
-  //////////
-  // DEVELOPMENT HELPER
-  //////////
-  function setBreakpoint() {
-    var wHost = window.location.host.toLowerCase();
-    var displayCondition =
-      wHost.indexOf("localhost") >= 0 || wHost.indexOf("surge") >= 0;
-    if (displayCondition) {
-      var wWidth = _window.width();
-
-      var content = "<div class='dev-bp-debug'>" + wWidth + "</div>";
-
-      $(".page").append(content);
-      setTimeout(function() {
-        $(".dev-bp-debug").fadeOut();
-      }, 1000);
-      setTimeout(function() {
-        $(".dev-bp-debug").remove();
-      }, 1500);
-    }
   }
 });

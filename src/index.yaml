@@ -3,3 +3,5 @@ ProjectTitle: jq-cabinet
 PageList:
 - file: homepage.html
   ready: 80
+- file: edit.html
+  ready: 20
