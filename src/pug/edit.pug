@@ -118,3 +118,264 @@ block content
                 label добавить ещё 1 объект
                   input(type='radio' name="group2")
                   span.checkmark
+      // блок продажа аренда начало
+      .edit-page__pa
+        .edit-page__pa-grid
+          .edit-page__pa-left
+            form(action="#")
+              .edit-page__pa-item(style="min-height: 418px;")
+                p.edit-page__types-title.edit-page__border Продажа
+                .edit-page__pa-row
+                  .edit-page__pa-flex.edit-page__pa-flex--select
+                    p Статус
+                    select
+                      option(value="val1") Статус #1
+                      option(value="val2") Статус #2
+                      option(value="val3") Статус #3
+                      option(value="val4") Статус #4
+
+                .edit-page__pa-row
+                  p Стоимость
+                  .edit-page__pa-flex
+                    .input-container.input-container--price
+                      input(type="text", name="")
+                    .filter__currency
+                      .input-radio
+                        label
+                          input(type='radio' name="currency" checked)
+                          span ₽
+                      .input-radio
+                        label
+                          input(type='radio' name="currency")
+                          span $
+                      .input-radio
+                        label
+                          input(type='radio' name="currency")
+                          span €
+                  .edit-page__pa-checkboxes
+                    .input-checkbox
+                      label Возможна ипотека
+                        input(type='checkbox' checked)
+                        span.checkmark
+                    .input-checkbox
+                      label Возможна рассрочка
+                        input(type='checkbox')
+                        span.checkmark
+              .edit-page__pa-item(style="min-height: 228px;")
+                p.edit-page__types-title.edit-page__border Комиссия
+                .edit-page__pa-row
+                  p С собственника
+                  .edit-page__pa-flex
+                    .edit-page__pa-flex-part
+                      .input-container.input-container--percent
+                        input(type="text", name="")
+                        p %
+                      p.fix или фикс
+                      .input-container.input-container--price
+                        input(type="text", name="")
+                    .filter__currency
+                      .input-radio
+                        label
+                          input(type='radio' name="currency" checked)
+                          span ₽
+                      .input-radio
+                        label
+                          input(type='radio' name="currency")
+                          span $
+                      .input-radio
+                        label
+                          input(type='radio' name="currency")
+                          span €
+              .edit-page__pa-item
+                p.edit-page__types-title.edit-page__border Площадки
+                .edit-page__pa-row.edit-page__pa-row--flex-end
+                  .edit-page__pa-row-part
+                    .input-checkbox
+                      label Выгружать на cian.ru
+                        input(type='checkbox' checked)
+                        span.checkmark
+                    select
+                      option(value="val1") Премиум #1
+                      option(value="val2") Премиум #2
+                      option(value="val3") Премиум #3
+                      option(value="val4") Премиум #4
+                  .edit-page__pa-row-part--input
+                    p Ставка
+                    .input-container.input-container--price
+                      input(type="text", name="")
+                .edit-page__pa-row.edit-page__pa-row--flex-end
+                  .edit-page__pa-row-part
+                    .input-checkbox
+                      label Выгружать на Яндекс.Недвижимость
+                        input(type='checkbox' checked)
+                        span.checkmark
+                    select
+                      option(value="val1") Премиум #1
+                      option(value="val2") Премиум #2
+                      option(value="val3") Премиум #3
+                      option(value="val4") Премиум #4
+                  .edit-page__pa-row-part--input
+                    p Ставка
+                    .input-container.input-container--price
+                      input(type="text", name="")
+              .edit-page__button
+                input.btn(type="submit", value="Сохранить")
+          .edit-page__pa-right
+            form(action="#")
+              .edit-page__pa-item(style="min-height: 418px;")
+                p.edit-page__types-title.edit-page__border Аренда
+                .edit-page__pa-row
+                  .edit-page__pa-flex.edit-page__pa-flex--select
+                    p Статус
+                    select
+                      option(value="val1") Статус #1
+                      option(value="val2") Статус #2
+                      option(value="val3") Статус #3
+                      option(value="val4") Статус #4
+
+                .edit-page__pa-row.edit-page__pa-row--flex-start
+                  .edit-page__pa-row-part
+                    p Стоимость в месяц
+                    .edit-page__pa-flex
+                      .input-container.input-container--price
+                        input(type="text", name="")
+                      .filter__currency
+                        .input-radio
+                          label
+                            input(type='radio' name="currency" checked)
+                            span ₽
+                        .input-radio
+                          label
+                            input(type='radio' name="currency")
+                            span $
+                        .input-radio
+                          label
+                            input(type='radio' name="currency")
+                            span €
+                  .edit-page__pa-radio-vertical
+                    p Минимальный период
+                    .input-checkbox--radio
+                      label год
+                        input(type='radio' name="group4")
+                        span.checkmark
+                    .input-checkbox--radio
+                      label месяц
+                        input(type='radio' name="group4")
+                        span.checkmark
+                    .input-checkbox--radio
+                      label сутки
+                        input(type='radio' name="group4")
+                        span.checkmark
+                .edit-page__pa-row--flex-start
+                  .edit-page__pa-row-part
+                    .edit-page__pa-row
+                      p Залог аренды
+                      select
+                        option(value="val1") Залог аренды #1
+                        option(value="val2") Залог аренды #2
+                        option(value="val3") Залог аренды #3
+                        option(value="val4") Залог аренды #4
+                    .edit-page__pa-row
+                      p Предоплата
+                      select
+                        option(value="val1") Предоплата #1
+                        option(value="val2") Предоплата #2
+                        option(value="val3") Предоплата #3
+                        option(value="val4") Предоплата #4
+                  .edit-page__pa-checkboxes-vertical
+                    .input-checkbox
+                      label Можно с детьми
+                        input(type='checkbox' checked)
+                        span.checkmark
+                    .input-checkbox
+                      label Можно с животными
+                        input(type='checkbox')
+                        span.checkmark
+                    .input-checkbox
+                      label Коммунальные платежи включены
+                        input(type='checkbox')
+                        span.checkmark
+              .edit-page__pa-item(style="min-height: 228px;")
+                p.edit-page__types-title.edit-page__border Комиссия
+                .edit-page__pa-row
+                  p С собственника
+                  .edit-page__pa-flex
+                    .edit-page__pa-flex-part
+                      .input-container.input-container--percent
+                        input(type="text", name="")
+                        p %
+                      p.fix или фикс
+                      .input-container.input-container--price
+                        input(type="text", name="")
+                    .filter__currency
+                      .input-radio
+                        label
+                          input(type='radio' name="currency" checked)
+                          span ₽
+                      .input-radio
+                        label
+                          input(type='radio' name="currency")
+                          span $
+                      .input-radio
+                        label
+                          input(type='radio' name="currency")
+                          span €
+                .edit-page__pa-row
+                  p С арендатора
+                  .edit-page__pa-flex
+                    .edit-page__pa-flex-part
+                      .input-container.input-container--percent
+                        input(type="text", name="")
+                        p %
+                      p.fix или фикс
+                      .input-container.input-container--price
+                        input(type="text", name="")
+                    .filter__currency
+                      .input-radio
+                        label
+                          input(type='radio' name="currency" checked)
+                          span ₽
+                      .input-radio
+                        label
+                          input(type='radio' name="currency")
+                          span $
+                      .input-radio
+                        label
+                          input(type='radio' name="currency")
+                          span €
+              .edit-page__pa-item
+                p.edit-page__types-title.edit-page__border Площадки
+                .edit-page__pa-row.edit-page__pa-row--flex-end
+                  .edit-page__pa-row-part
+                    .input-checkbox
+                      label Выгружать на cian.ru
+                        input(type='checkbox' checked)
+                        span.checkmark
+                    select
+                      option(value="val1") Премиум #1
+                      option(value="val2") Премиум #2
+                      option(value="val3") Премиум #3
+                      option(value="val4") Премиум #4
+                  .edit-page__pa-row-part--input
+                    p Ставка
+                    .input-container.input-container--price
+                      input(type="text", name="")
+                .edit-page__pa-row.edit-page__pa-row--flex-end
+                  .edit-page__pa-row-part
+                    .input-checkbox
+                      label Выгружать на Яндекс.Недвижимость
+                        input(type='checkbox' checked)
+                        span.checkmark
+                    select
+                      option(value="val1") Премиум #1
+                      option(value="val2") Премиум #2
+                      option(value="val3") Премиум #3
+                      option(value="val4") Премиум #4
+                  .edit-page__pa-row-part--input
+                    p Ставка
+                    .input-container.input-container--price
+                      input(type="text", name="")
+              .edit-page__button
+                input.btn(type="submit", value="Сохранить")
+        
+      // блок продажа аренда конец
