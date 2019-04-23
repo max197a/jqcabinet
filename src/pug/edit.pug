@@ -83,5 +83,38 @@ block content
               label добавить ещё 1 объект
                 input(type='radio' name="group2")
                 span.checkmark
-          
-          
+      .edit-page__visibility
+        form(action="#")
+          p.edit-page__types-title.edit-page__border Видимость на сайте
+          .edit-page__visibility-checkboxes
+            .input-checkbox
+              label Закрытая продажа
+                input(type='checkbox')
+                span.checkmark
+            .input-checkbox
+              label Без фото
+                input(type='checkbox')
+                span.checkmark
+            .input-checkbox
+              label Без цены
+                input(type='checkbox')
+                span.checkmark
+            .input-checkbox
+              label Без перехода в карточку
+                input(type='checkbox')
+                span.checkmark
+          .edit-page__button
+            input.btn(type="submit", value="Сохранить")
+            .edit-page__button-radio
+              .input-checkbox--radio
+                label и продолжить редактирование
+                  input(type='radio' name="group2")
+                  span.checkmark
+              .input-checkbox--radio
+                label перейти в список
+                  input(type='radio' name="group2")
+                  span.checkmark
+              .input-checkbox--radio
+                label добавить ещё 1 объект
+                  input(type='radio' name="group2")
+                  span.checkmark
