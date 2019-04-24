@@ -561,11 +561,22 @@
               left: 50%
               top: 0
               transform: translateX(-50%)
-
-
-      
-
-      
+  &__about
+    &-buttons
+      margin-top: 20px
+      a
+        margin-right: 30px
+        &:last-child
+          margin-right: 0
+        &.is-active
+          color: $colorRed
+    p
+      margin-top: 25px
+      font-size: 15px
+    .input-container
+      margin-top: 30px
+      textarea
+        min-height: 100px
 
 +r($desktop1068)
   .edit-page

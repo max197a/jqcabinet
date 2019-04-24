@@ -722,3 +722,30 @@ block content
               span.plus
 
       // блок Помещения конец
+
+      // блок Описание дома конец
+      .edit-page__area
+        p.edit-page__types-title.edit-page__border Описание дома
+        .edit-page__about
+          .edit-page__about-buttons
+            a(href="#") Для cian.ru
+            a.is-active(href="#") Для сайта
+          p В данном описании необходимо указывать ту информацию, которая не попадает автоматически формируемый текст в выгрузке или заполняемые на площадке характеристики
+          .input-container
+            textarea
+          .edit-page__button
+            input.btn(type="submit", value="Сохранить")
+            .edit-page__button-radio
+              .input-checkbox--radio
+                label и продолжить редактирование
+                  input(type='radio' name="group2")
+                  span.checkmark
+              .input-checkbox--radio
+                label перейти в список
+                  input(type='radio' name="group2")
+                  span.checkmark
+              .input-checkbox--radio
+                label добавить ещё 1 объект
+                  input(type='radio' name="group2")
+                  span.checkmark
+      // блок Описание дома конец
