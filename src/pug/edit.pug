@@ -613,3 +613,112 @@ block content
           
                 
       // блок дом/коммуникации конец
+
+      // блок Поэтажное описание начало
+
+      .edit-page__area
+        p.edit-page__types-title.edit-page__border Поэтажное описание
+        .edit-page__floors
+          .edit-page__floors-item
+            form(action="#")
+              p Цоколь
+              .input-container
+                textarea
+              .edit-page__button
+                input.btn(type="submit", value="Добавить поэтажный план")
+          .edit-page__floors-item
+            form(action="#")
+              p 1 этаж
+              .input-container
+                textarea
+              .edit-page__button
+                input.btn(type="submit", value="Добавить поэтажный план")
+          .edit-page__floors-item
+            form(action="#")
+              p 2 этаж
+              .input-container
+                textarea
+              .edit-page__button
+                input.btn(type="submit", value="Добавить поэтажный план")
+          .edit-page__floors-item
+            form(action="#")
+              p Мансарда
+              .input-container
+                textarea
+              .edit-page__button
+                input.btn(type="submit", value="Добавить поэтажный план")
+        .edit-page__room
+          .edit-page__room-row
+            .edit-page__room-row-part
+              p Помещение
+              p.edit-page__room-info Тренажёрный зал
+            .edit-page__room-row-part
+              p.middle м²
+              .input-container
+                input(type="text", name="")
+                a.close(href="#") x
+          .edit-page__room-row
+            .edit-page__room-row-part
+              p.edit-page__room-info Кинотеатр
+            .edit-page__room-row-part
+              .input-container
+                input(type="text", name="")
+                a.close(href="#") x
+            
+      // блок Поэтажное описание конец
+
+      // блок Помещения начало
+      
+      .edit-page__area
+        p.edit-page__types-title.edit-page__border Помещения
+        .edit-page__rooms
+          p.edit-page__rooms-item Холл
+          p.edit-page__rooms-item Гостиная
+          p.edit-page__rooms-item Санузел
+          p.edit-page__rooms-item Кухня
+          p.edit-page__rooms-item Столовая
+          p.edit-page__rooms-item Спальня
+          p.edit-page__rooms-item Мастер-спальня
+          p.edit-page__rooms-item Детская
+          p.edit-page__rooms-item Кабинет
+          p.edit-page__rooms-item Кладовая
+          p.edit-page__rooms-item Постирочная
+          p.edit-page__rooms-item Сауна
+          p.edit-page__rooms-item Комната отдыха
+          p.edit-page__rooms-item Балкон
+          p.edit-page__rooms-item Тренажёрный зал
+          p.edit-page__rooms-item Для персонала
+          p.edit-page__rooms-item Кухня для персонала
+          p.edit-page__rooms-item Кинотеатр
+          p.edit-page__rooms-item Гараж на 1 м/м
+          p.edit-page__rooms-item Гараж на 2 м/м
+          p.edit-page__rooms-item Терраса
+          p.edit-page__rooms-item Игровая
+          p.edit-page__rooms-item Винная
+          p.edit-page__rooms-item Хамам
+          p.edit-page__rooms-item Котельная
+          a.edit-page__rooms-open-more(href="#" js-open-rooms)
+            span
+        .edit-page__button
+          input.btn(type="submit", value="Сохранить")
+          .edit-page__button-radio
+            .input-checkbox--radio
+              label и продолжить редактирование
+                input(type='radio' name="group2")
+                span.checkmark
+            .input-checkbox--radio
+              label перейти в список
+                input(type='radio' name="group2")
+                span.checkmark
+            .input-checkbox--radio
+              label добавить ещё 1 объект
+                input(type='radio' name="group2")
+                span.checkmark
+        .edit-page__rooms-add
+          .input-container
+            input(type="text" placeholder="Новый тип помещения")
+          a.btn(href="#")
+            span Добавить
+              span.plus
+
+      // блок Помещения конец

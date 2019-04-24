@@ -49,9 +49,17 @@ $(document).ready(function() {
       .addClass("is-active");
   });
 
-  _document.on("click", "[js-open-history-container]", function(e) {
+  $(document).on("click", "[js-open-history-container]", function(e) {
     e.preventDefault();
     $(".edit-page__history-container").slideToggle();
+  });
+
+  $(document).on("click", "[js-open-rooms]", function(e) {
+    e.preventDefault();
+    $(this).fadeOut();
+    $(this)
+      .parent()
+      .addClass("is-open");
   });
 
   // FILTER REMOVE CLASS IS ACTIVE WHEN FOCUS ANOTHER ELEMENT
