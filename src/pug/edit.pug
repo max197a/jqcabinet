@@ -379,3 +379,237 @@ block content
                 input.btn(type="submit", value="Сохранить")
         
       // блок продажа аренда конец
+
+      // блок история аренды/продаж начало
+      .edit-page__history
+        .edit-page__history-link
+          a(href="#" js-open-history-container) 
+            span Посмотреть историю изменения стоимости и статусов
+        .edit-page__history-container
+          .edit-page__history-grid
+            .edit-page__history-left
+              p.edit-page__types-title.edit-page__border Продажа
+              .edit-page__history-row
+                p.date 20.03.2019
+                .edit-page__history-row-part
+                  p.price $ 100 000 000
+                  p.status Опубликован
+              .edit-page__history-row
+                p.date 20.03.2019
+                .edit-page__history-row-part
+                  p.price $ 100 000 000
+                  p.status Опубликован
+              .edit-page__history-row
+                p.date 20.03.2019
+                .edit-page__history-row-part
+                  p.price $ 100 000 000
+                  p.status Опубликован
+              .edit-page__history-row
+                p.date 20.03.2019
+                .edit-page__history-row-part
+                  p.price $ 100 000 000
+                  p.status Пауза
+              .edit-page__history-row
+                p.date 20.03.2019
+                .edit-page__history-row-part
+                  p.price 6 000 000 000 руб.
+                  p.status Опубликован
+              .edit-page__history-row
+                p.date 20.03.2019
+                .edit-page__history-row-part
+                  p.price 6 250 000 000 руб.
+                  p.status Опубликован
+            .edit-page__history-right
+              p.edit-page__types-title.edit-page__border Аренда
+              .edit-page__history-row
+                p.date 20.03.2019
+                .edit-page__history-row-part
+                  p.price $ 160 000
+                  p.status Архив
+              .edit-page__history-row
+                p.date 20.03.2019
+                .edit-page__history-row-part
+                  p.price $ 160 000
+                  p.status Опубликован
+      // блок история аренды/продаж конец
+
+      // блок участок начало
+      .edit-page__area
+        p.edit-page__types-title.edit-page__border Участок
+        .edit-page__pa-grid
+          .edit-page__pa-left
+            .edit-page__area-row
+              p Площадь участка, в сотках
+              .input-container
+                input(type="text", name="")
+            .edit-page__area-row
+              p Тип участка
+              select
+                option(value="val1") Полевой #1
+                option(value="val2") Полевой #2
+                option(value="val3") Полевой #3
+                option(value="val4") Полевой #4
+            .edit-page__area-row
+              p Форма
+              select
+                option(value="val1") Форма #1
+                option(value="val2") Форма #2
+                option(value="val3") Форма #3
+                option(value="val4") Форма #4
+
+          .edit-page__pa-right
+            .edit-page__pa-row.edit-page__area--flex-start
+              p Особенности:
+              .edit-page__pa-checkboxes-vertical
+                .input-checkbox
+                  label Газон
+                    input(type='checkbox' checked)
+                    span.checkmark
+                .input-checkbox
+                  label Водоём
+                    input(type='checkbox')
+                    span.checkmark
+                .input-checkbox
+                  label Плодовые деревья и кустарники
+                    input(type='checkbox')
+                    span.checkmark
+                .input-checkbox
+                  label Хвойные деревья (сосны)
+                    input(type='checkbox' checked)
+                    span.checkmark
+                .input-checkbox
+                  label Лиственные леревья (берёзы)
+                    input(type='checkbox')
+                    span.checkmark
+                .input-checkbox
+                  label Рельефный
+                    input(type='checkbox')
+                    span.checkmark
+                .input-checkbox
+                  label Подсветка дорожек
+                    input(type='checkbox')
+                    span.checkmark
+      // блок участок конец
+
+      // блок дом/коммуникации начало
+      .edit-page__area
+        .edit-page__pa-grid
+          .edit-page__pa-left
+            p.edit-page__types-title.edit-page__border Дом
+            .edit-page__area-grid
+              .edit-page__area-grid-item
+                .edit-page__area-grid-row
+                  p Год постройки
+                  .input-container
+                    input(type="text", name="")
+                .edit-page__area-grid-row
+                  p Площадь, м²
+                  .input-container
+                    input(type="text", name="")
+                .edit-page__area-grid-row
+                  p Кол-во балконов
+                  .input-container
+                    input(type="text", name="")
+                .edit-page__area-grid-row
+                  p Кол-во уровней (этажей)
+                  .input-container
+                    input(type="text", name="")
+              .edit-page__area-grid-item
+                .edit-page__area-grid-row
+                  p Кол-во спален
+                  .input-container
+                    input(type="text", name="")
+                .edit-page__area-grid-row
+                  p Кол-во санузлов
+                  .input-container
+                    input(type="text", name="")
+                .edit-page__area-grid-row
+                  p Кол-во лифтов
+                  .input-container
+                    input(type="text", name="")
+                .edit-page__area-grid-row
+                  p Высота потолков
+                  .input-container
+                    input(type="text", name="")
+
+          .edit-page__pa-right.edit-page__pa-right--editable
+            p.edit-page__types-title.edit-page__border Коммуникации
+            .edit-page__area-row
+              p.short Отопление
+              select
+                option(value="val1") Отопление #1
+                option(value="val2") Отопление #2
+                option(value="val3") Отопление #3
+                option(value="val4") Отопление #4
+            .edit-page__area-row
+              p.short Канализация
+              select
+                option(value="val1") Канализация #1
+                option(value="val2") Канализация #2
+                option(value="val3") Канализация #3
+                option(value="val4") Канализация #4
+            .edit-page__area--flex-start.edit-page__area--flex-start--editable
+              p Водопровод:
+              .edit-page__pa-checkboxes-vertical
+                .input-checkbox
+                  label Собственная скважина
+                    input(type='checkbox' checked)
+                    span.checkmark
+                .input-checkbox
+                  label Центральный водопровод
+                    input(type='checkbox')
+                    span.checkmark
+                .input-checkbox
+                  label Очистные сооружения
+                    input(type='checkbox')
+                    span.checkmark
+            .edit-page__area-row
+              p.short Электричество, кВт (мощность)
+              .input-container.input-container--short
+                input(type="text", name="")
+        .edit-page__visibility-checkboxes
+          .input-checkbox
+            label Цоколь
+              input(type='checkbox')
+              span.checkmark
+          .input-checkbox
+            label Мансарда
+              input(type='checkbox')
+              span.checkmark
+          .input-checkbox
+            label Второй свет
+              input(type='checkbox')
+              span.checkmark
+          .input-checkbox
+            label Панорамное остекление
+              input(type='checkbox')
+              span.checkmark
+        .edit-page__area-selects
+          .edit-page__area-selects-item
+            p Состояние
+            select
+              option(value="val1") Отличное #1
+              option(value="val2") Отличное #2
+              option(value="val3") Отличное #3
+              option(value="val4") Отличное #4
+          .edit-page__area-selects-item
+            p Ремонт
+            select
+              option(value="val1") Под черновую отделку #1
+              option(value="val2") Под черновую отделку #2
+              option(value="val3") Под черновую отделку #3
+              option(value="val4") Под черновую отделку #4
+          .edit-page__area-selects-item
+            p Мебель
+            select
+              option(value="val1") Отсутствует #1
+              option(value="val2") Отсутствует #2
+              option(value="val3") Отсутствует #3
+              option(value="val4") Отсутствует #4
+          .edit-page__area-selects-item
+            p Этаж (для квартиры)
+            .input-container.input-container--short
+              input(type="text", name="")
+          
+                
+      // блок дом/коммуникации конец

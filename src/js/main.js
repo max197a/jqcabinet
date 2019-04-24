@@ -49,6 +49,11 @@ $(document).ready(function() {
       .addClass("is-active");
   });
 
+  _document.on("click", "[js-open-history-container]", function(e) {
+    e.preventDefault();
+    $(".edit-page__history-container").slideToggle();
+  });
+
   // FILTER REMOVE CLASS IS ACTIVE WHEN FOCUS ANOTHER ELEMENT
 
   _document.on("click", function(e) {
