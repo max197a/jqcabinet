@@ -723,7 +723,406 @@ block content
 
       // блок Помещения конец
 
-      // блок Описание дома конец
+      // блок Материалы и отделка конец
+      form(action="#")
+        .edit-page__materials
+          .edit-page__area
+            p.edit-page__types-title.edit-page__border Материалы и отделка
+              .edit-page__pa-grid
+                .edit-page__pa-left
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Стены
+                      select
+                        option(value="val1") Стены #1
+                        option(value="val2") Стены #2
+                        option(value="val3") Стены #3
+                        option(value="val4") Стены #4
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--input
+                      p Толщина стен, мм
+                      .input-container.input-container--short
+                        input(type="text")
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Окна
+                      select
+                        option(value="val1") Окна #1
+                        option(value="val2") Окна #2
+                        option(value="val3") Окна #3
+                        option(value="val4") Окна #4
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--input
+                      p Стеклопакеты, камер
+                      .input-container.input-container--short
+                        input(type="text")
+                .edit-page__pa-right
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Кровля
+                      select
+                        option(value="val1") Кровля #1
+                        option(value="val2") Кровля #2
+                        option(value="val3") Кровля #3
+                        option(value="val4") Кровля #4
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Фундамент
+                      select
+                        option(value="val1") Фундамент #1
+                        option(value="val2") Фундамент #2
+                        option(value="val3") Фундамент #3
+                        option(value="val4") Фундамент #4
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Лестница
+                      select
+                        option(value="val1") Лестница #1
+                        option(value="val2") Лестница #2
+                        option(value="val3") Лестница #3
+                        option(value="val4") Лестница #4
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Без отделки
+                      select
+                        option(value="val1") Без отделки #1
+                        option(value="val2") Без отделки #2
+                        option(value="val3") Без отделки #3
+                        option(value="val4") Без отделки #4
+          .edit-page__area
+            .edit-page__pa-grid
+              .edit-page__pa-left
+                p.edit-page__types-title.edit-page__border Оснащение дома
+                .edit-page__materials-area
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Кондиционирование
+                      select
+                        option(value="val1") Кондиционирование #1
+                        option(value="val2") Кондиционирование #2
+                        option(value="val3") Кондиционирование #3
+                        option(value="val4") Кондиционирование #4
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Вентиляция
+                      select
+                        option(value="val1") Вентиляция #1
+                        option(value="val2") Вентиляция #2
+                        option(value="val3") Вентиляция #3
+                        option(value="val4") Вентиляция #4
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Интернет
+                      select
+                        option(value="val1") Интернет #1
+                        option(value="val2") Интернет #2
+                        option(value="val3") Интернет #3
+                        option(value="val4") Интернет #4
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Телевидение
+                      select
+                        option(value="val1") Телевидение #1
+                        option(value="val2") Телевидение #2
+                        option(value="val3") Телевидение #3
+                        option(value="val4") Телевидение #4
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Домофон
+                      select
+                        option(value="val1") Домофон #1
+                        option(value="val2") Домофон #2
+                        option(value="val3") Домофон #3
+                        option(value="val4") Домофон #4
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Телефон
+                      select
+                        option(value="val1") Телефон #1
+                        option(value="val2") Телефон #2
+                        option(value="val3") Телефон #3
+                        option(value="val4") Телефон #4
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Подсветка фасада
+                      select
+                        option(value="val1") Подсветка фасада #1
+                        option(value="val2") Подсветка фасада #2
+                        option(value="val3") Подсветка фасада #3
+                        option(value="val4") Подсветка фасада #4
+
+              .edit-page__pa-right.edit-page__pa-right--editable
+                .edit-page__materials-grid
+                  .edit-page__materials-security
+                    p.edit-page__types-title.edit-page__border Система охраны
+                    .edit-page__materials-area
+                      .edit-page__pa-row.edit-page__pa-row--checkboxes
+                        .input-checkbox
+                          label Сигнализация
+                            input(type='checkbox')
+                            span.checkmark
+                        .input-checkbox
+                          label Пультовая охрана
+                            input(type='checkbox')
+                            span.checkmark
+                        .input-checkbox
+                          label Видеонаблюдение
+                            input(type='checkbox')
+                            span.checkmark
+                        .input-checkbox
+                          label Датчики задымления (противопожарные)
+                            input(type='checkbox')
+                            span.checkmark
+                        .input-checkbox
+                          label Датчики протечки воды
+                            input(type='checkbox')
+                            span.checkmark
+                        .input-checkbox
+                          label Датчики утечки газа
+                            input(type='checkbox')
+                            span.checkmark
+                  .edit-page__materials-car
+                    p.edit-page__types-title.edit-page__border Для машины
+                    .edit-page__materials-area
+                    .edit-page__pa-row
+                      p.info Отдельностоящий гараж нужно добавлять отдельно
+                    .edit-page__pa-row
+                      .edit-page__pa-flex
+                        p Гараж в доме
+                        .input-checkbox
+                          label Отапливаемый
+                            input(type='checkbox')
+                            span.checkmark
+                    .edit-page__pa-row
+                      .edit-page__pa-flex.edit-page__pa-flex--input
+                        p Количество м/м
+                        .input-container.input-container--short
+                          input(type="text")
+                    .edit-page__pa-row
+                      .edit-page__pa-flex.edit-page__pa-flex--input
+                        p Навес для машин, м/м
+                        .input-container.input-container--short
+                          input(type="text")
+                    .edit-page__pa-row
+                      .edit-page__pa-flex.edit-page__pa-flex--input
+                        p Площадка для машины, м/м
+                        .input-container.input-container--short
+                          input(type="text")
+                    .edit-page__pa-row
+                      .edit-page__pa-flex.edit-page__pa-flex--select
+                        p Материал площадки
+                        select
+                          option(value="val1") Материал площадки #1
+                          option(value="val2") Материал площадки #2
+                          option(value="val3") Материал площадки #3
+                          option(value="val4") Материал площадки #4
+                    .edit-page__pa-row
+                      .input-checkbox
+                        label Есть зарядка для электромобиля
+                          input(type='checkbox')
+                          span.checkmark
+
+          .edit-page__area
+            .edit-page__pa-grid
+              .edit-page__pa-left
+                p.edit-page__types-title.edit-page__border Дополнительно
+                .edit-page__materials-area
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Камин
+                      select
+                        option(value="val1") Камин #1
+                        option(value="val2") Камин #2
+                        option(value="val3") Камин #3
+                        option(value="val4") Камин #4
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Барбекю
+                      select
+                        option(value="val1") Барбекю #1
+                        option(value="val2") Барбекю #2
+                        option(value="val3") Барбекю #3
+                        option(value="val4") Барбекю #4
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p
+                      .edit-page__materials-checkboxes
+                        .input-checkbox
+                          label Гриль
+                            input(type='checkbox')
+                            span.checkmark
+                        .input-checkbox
+                          label Пицца-печь
+                            input(type='checkbox')
+                            span.checkmark
+                        .input-checkbox
+                          label Казан
+                            input(type='checkbox')
+                            span.checkmark
+                        .input-checkbox
+                          label Коптильня
+                            input(type='checkbox')
+                            span.checkmark
+                  .edit-page__pa-row.edit-page__pa-row--checkboxes
+                    .input-checkbox
+                      label Винный погреб
+                        input(type='checkbox')
+                        span.checkmark
+                    .input-checkbox
+                      label Кинотеатр
+                        input(type='checkbox')
+                        span.checkmark
+
+              .edit-page__pa-right.edit-page__pa-right--editable
+                p.edit-page__types-title.edit-page__border SPA-зона в доме
+                .edit-page__materials-area
+                  .edit-page__pa-row
+                    .edit-page__pa-row--spa-checkboxes
+                      .input-checkbox
+                        label Финская сауна (сухая)
+                          input(type='checkbox')
+                          span.checkmark
+                      .input-checkbox
+                        label Ванна с гидромассажем
+                          input(type='checkbox')
+                          span.checkmark
+                      .input-checkbox
+                        label Русская баня (влажная)
+                          input(type='checkbox')
+                          span.checkmark
+                      .input-checkbox
+                        label Ванна 4+ чел
+                          input(type='checkbox')
+                          span.checkmark
+                      .input-checkbox
+                        label Хамам
+                          input(type='checkbox')
+                          span.checkmark
+                      .input-checkbox
+                        label Тропический душ
+                          input(type='checkbox')
+                          span.checkmark
+                      .input-checkbox
+                        label Купель
+                          input(type='checkbox')
+                          span.checkmark
+                      .input-checkbox
+                        label Соляная комната
+                          input(type='checkbox')
+                          span.checkmark
+                      .input-checkbox
+                        label Массажный стол или кабинет
+                          input(type='checkbox')
+                          span.checkmark
+                      .input-checkbox
+                        label Ледяная комната или фонтан
+                          input(type='checkbox')
+                          span.checkmark
+                        
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Бассейн
+                      select
+                        option(value="val1") Бассейн #1
+                        option(value="val2") Бассейн #2
+                        option(value="val3") Бассейн #3
+                        option(value="val4") Бассейн #4
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--input
+                      p Длина
+                      .input-container.input-container--short
+                        input(type="text")
+          .edit-page__area
+            p.edit-page__types-title.edit-page__border Ограждение периметра
+            .edit-page__materials
+              .edit-page__pa-grid
+                .edit-page__pa-left
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Материал забора
+                      select
+                        option(value="val1") Материал забора #1
+                        option(value="val2") Материал забора #2
+                        option(value="val3") Материал забора #3
+                        option(value="val4") Материал забора #4
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Прозрачность забота
+                      select
+                        option(value="val1") Прозрачность забота #1
+                        option(value="val2") Прозрачность забота #2
+                        option(value="val3") Прозрачность забота #3
+                        option(value="val4") Прозрачность забота #4
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Столбы
+                      select
+                        option(value="val1") Столбы #1
+                        option(value="val2") Столбы #2
+                        option(value="val3") Столбы #3
+                        option(value="val4") Столбы #4
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--input
+                      p Высота забора
+                      .input-container.input-container--short
+                        input(type="text")
+                  .edit-page__pa-row
+                    .input-checkbox
+                      label Есть подсветка забора
+                        input(type='checkbox')
+                        span.checkmark
+                        
+                .edit-page__pa-right
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Ворота
+                      select
+                        option(value="val1") Ворота #1
+                        option(value="val2") Ворота #2
+                        option(value="val3") Ворота #3
+                        option(value="val4") Ворота #4
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--select
+                      p Материал ворот
+                      select
+                        option(value="val1") Материал ворот #1
+                        option(value="val2") Материал ворот #2
+                        option(value="val3") Материал ворот #3
+                        option(value="val4") Материал ворот #4
+                  .edit-page__pa-row
+                    .input-checkbox
+                      label Дистанционное открытие ворот
+                        input(type='checkbox')
+                        span.checkmark
+                  .edit-page__pa-row
+                    .edit-page__pa-flex.edit-page__pa-flex--input
+                      p Количество калиток
+                      .input-container.input-container--short
+                        input(type="text")
+                  .edit-page__pa-row
+                    .input-checkbox
+                      label Дистанционное открытие калитки
+                        input(type='checkbox')
+                        span.checkmark
+            .edit-page__button
+              input.btn(type="submit", value="Сохранить")
+              .edit-page__button-radio
+                .input-checkbox--radio
+                  label и продолжить редактирование
+                    input(type='radio' name="group2")
+                    span.checkmark
+                .input-checkbox--radio
+                  label перейти в список
+                    input(type='radio' name="group2")
+                    span.checkmark
+                .input-checkbox--radio
+                  label добавить ещё 1 объект
+                    input(type='radio' name="group2")
+                    span.checkmark
+                
+      // блок Материалы и отделка конец
+
+      // блок Описание дома начало
       .edit-page__area
         p.edit-page__types-title.edit-page__border Описание дома
         .edit-page__about

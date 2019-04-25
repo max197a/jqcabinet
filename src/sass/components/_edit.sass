@@ -578,6 +578,67 @@
       textarea
         min-height: 100px
 
+  &__materials
+    &-grid
+      display: flex
+    &-security
+      max-width: 220px
+      width: 100%
+      margin-right: 9%
+      .input-checkbox
+        margin-bottom: 20px
+    &-car
+      width: 100%
+      p.info
+        max-width: 100%
+      .input-checkbox
+        margin-bottom: 0
+      .input-container
+        margin-left: auto
+    .edit-page__pa-row
+      margin-top: 20px
+      &--checkboxes
+        display: flex
+        flex-wrap: wrap
+        .input-checkbox
+          margin-right: 20px
+      &--spa-checkboxes
+        display: flex
+        flex-wrap: wrap
+        .input-checkbox
+          width: calc(50% - 25px)
+          margin-right: 25px
+          margin-bottom: 20px
+          &:nth-child(even)
+            margin-right: 0
+            width: 50%
+    p
+      max-width: 155px
+      width: 100%
+      margin-right: 20px
+    .edit-page__types-title
+      max-width: 100%
+      margin-right: 0
+      margin-bottom: 10px
+    &-checkboxes
+      display: flex
+      flex-wrap: wrap
+      max-width: 300px
+      .input-checkbox
+        margin-right: 20px
+        width: calc(50% - 20px)
+        min-width: 120px
+    .input-container
+      &--short
+        max-width: 80px 
+    .edit-page__pa-flex
+        &--input
+          p
+            padding-bottom: 0
+    &-area
+      padding-top: 1px
+      margin-bottom: -1px
+
 +r($desktop1068)
   .edit-page
     &__area
@@ -887,3 +948,38 @@
           margin-top: 10px
           width: 100%
           max-width: 100%
+    &__materials
+      &-grid
+        flex-direction: column
+      &-security
+        max-width: 100%
+        margin-right: 0
+      &-car
+        width: 100%
+        p
+          max-width: 270px
+        p.info
+          max-width: 100%
+        .input-checkbox
+          margin-bottom: 0
+          margin-left: auto
+        .input-container
+          margin-left: auto
+      .edit-page__pa-row--checkboxes
+        flex-direction: column
+      .edit-page__pa-flex
+        &--input
+          p
+            padding-bottom: 0
+          .input-container
+            margin-left: auto
+      .edit-page__pa-row
+        &--spa-checkboxes
+          .input-checkbox
+            width: 100%
+            margin-right: 0
+            margin-bottom: 20px
+            &:nth-child(even)
+              width: 100%
+            &:last-child
+              margin-bottom: 0
