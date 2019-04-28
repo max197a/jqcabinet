@@ -781,6 +781,225 @@
     &-open-more
       display: none
 
+  &__video
+    .edit-page__types-title
+      margin-top: 30px
+    &-grid
+      display: flex
+      align-items: flex-end
+      width: 100%
+      justify-content: space-between
+    &-item
+      width: 40%
+      margin: 0 10px
+      &:first-child
+        max-width: 310px
+        margin-left: 0
+      &:last-child
+        margin-right: 0
+      p
+        padding-bottom: 7px
+      &--buttons
+        display: flex
+        justify-content: space-between
+        a.btn
+          width: 48%
+
+    .btn
+      background: #00c853
+      border-color: #00c853
+      width: 100%
+      border-radius: 50px
+      font-size: 14px
+      padding: 13px
+      line-height: 1
+      cursor: pointer
+      margin-right: 0
+      max-width: 200px
+      width: 50%
+      margin-bottom: 0
+      &:hover
+        background: #00b44b
+      span
+        position: relative
+        &.plus
+          position: absolute
+          left: -22px
+          top: 50%
+          transform: translateY(-50%)
+          width: 14px
+          height: 14px
+          &:before
+            position: absolute
+            width: 14px
+            height: 1px
+            display: block
+            content: ''
+            background: #fff
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+          &:after
+            position: absolute
+            width: 1px
+            height: 14px
+            display: block
+            content: ''
+            background: #fff
+            left: 50%
+            top: 0
+            transform: translateX(-50%)
+
+  &__contacts
+    padding-top: 10px
+    &-item
+      margin-top: 20px
+      padding-bottom: 20px
+      border-bottom: 1px solid #cccccc
+      &:last-child
+        padding-bottom: 0
+        border-bottom: none
+      p
+        font-size: 15px
+        color: #000
+        line-height: 1.4
+        &.title
+          font-size: 18px
+          margin-bottom: 20px
+          &--red
+            color: #ff4a48
+      a
+        font-size: 15px
+        color: #ff4a48
+        line-height: 1.4
+    &-info
+      display: flex
+      flex-wrap: wrap
+      a
+        display: inline-block
+      p
+        &:after
+          content: ','
+          font-size: 15px
+          margin-right: 5px
+        &:nth-last-child(2)
+          &:after
+            display: none
+      p.status
+        &:before
+          content: '—'
+          font-size: 15px
+          color: #000
+          margin: 0 5px
+        &:after
+          display: none
+
+  &__add-contact
+    p
+      padding-bottom: 7px
+      margin-top: 20px
+    &--full
+      padding-top: 10px
+      padding-bottom: 20px
+    &-grid
+      display: flex
+      justify-content: space-between
+    &-item
+      max-width: 370px
+      width: 32%
+
+  &__comments
+    padding-top: 20px
+    &-item
+      padding: 20px 0
+      border-bottom: 1px solid #ccc
+      display: flex
+      align-items: flex-start
+      p
+        font-size: 15px
+        line-height: 1.2
+        &.name
+          font-size: 15px
+        &.date
+          font-size: 13px
+          color: #959595
+          margin-top: 3px
+    &-name
+      display: flex
+      align-items: flex-start
+      max-width: 370px
+      width: 32%
+    &-image
+      max-width: 20px
+      width: 100%
+      font-size: 0
+      margin-right: 10px
+      img
+        width: 20px
+        height: auto
+    &-content
+      font-size: 0
+      width: 66%
+      margin-left: auto
+      max-width: 794px
+      p
+        font-size: 15px
+        line-height: 1.2
+    &-form
+      display: flex
+      align-items: center
+      padding-top: 20px
+      .input-container
+        font-size: 0
+        width: 100%
+        margin-top: 20px
+        textarea
+          min-height: 40px
+          max-height: 40px
+      .btn
+        background: #00c853
+        border-color: #00c853
+        width: 100%
+        border-radius: 50px
+        font-size: 16px
+        padding: 9px
+        line-height: normal
+        cursor: pointer
+        margin-right: 0
+        margin-left: 20px
+        max-width: 200px
+        width: 50%
+        margin-bottom: 0
+        margin-top: 20px
+        &:hover
+          background: #00b44b
+
+  &__objects
+    width: 100%
+    padding: 10px 40px 30px
+    background: #f5f5f5
+    display: flex
+    flex-wrap: wrap
+    &-item
+      display: flex
+      align-items: flex-start
+      margin-top: 20px
+      width: 50%
+      p
+        max-width: 230px
+        width: 100%
+        padding-right: 15px
+        font-size: 15px
+        color: #000
+        &.date
+          font-size: 13px
+          color: #959595
+          margin-top: 3px
+    &-name
+      width: 100%
+      p
+        max-width: 100%
+
 +r($desktop1068)
   .edit-page
     &__area
@@ -1198,3 +1417,66 @@
           border-left: none
           border-top: none
           margin-top: 30px
+    &__video
+      &-grid
+        flex-direction: column
+      &-item
+        width: 100%
+        margin: 20px 0 0
+        &:first-child
+          max-width: 100%
+        &--buttons
+          a.btn
+            max-width: 100%
+    &__add-contact
+      &--full
+        padding-top: 0px
+        padding-bottom: 10px
+      &-grid
+        flex-direction: column
+      &-item
+        max-width: 100%
+        width: 100%
+
+    &__comments
+      padding-top: 10px
+      &-item
+        padding: 20px 0
+        border-bottom: 1px solid #ccc
+        flex-direction: column
+        flex-wrap: wrap
+      &-name
+        max-width: 100%
+        width: 100%
+      &-content
+        width: 100%
+        margin-left: 0
+        max-width: 100%
+        padding-left: 30px
+        margin-top: 20px
+      &-form
+        padding-top: 0
+        flex-direction: column
+        .input-container
+          textarea
+            min-height: 100px
+            max-height: 100px
+        .btn
+          margin-left: 0
+          max-width: 100%
+          width: 100%
+    &__objects
+      width: 100%
+      padding: 10px 20px 30px
+      margin: 0 -20px
+      flex-direction: column
+      max-width: calc(100% + 40px)
+      width: calc(100% + 40px)
+      &-item
+        flex-direction: column
+        width: 100%
+        p
+          max-width: 100%
+          padding-right: 0
+      &-name
+        margin-top: 5px

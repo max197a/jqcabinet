@@ -62,6 +62,46 @@ $(document).ready(function() {
       .addClass("is-open");
   });
 
+  $(document).ready(function() {
+    var mh1 = 0;
+    $(".editable--height1").each(function() {
+      var h_block = parseInt($(this).height());
+      if (h_block > mh1) {
+        mh1 = h_block;
+      }
+    });
+    $(".editable--height1").css("min-height", mh1);
+
+    var mh2 = 0;
+    $(".editable--height2").each(function() {
+      var h_block = parseInt($(this).height());
+      if (h_block > mh2) {
+        mh2 = h_block;
+      }
+    });
+    $(".editable--height2").css("min-height", mh2);
+  });
+
+  $(window).resize(function() {
+    var mh1 = 0;
+    $(".editable--height1").each(function() {
+      var h_block = parseInt($(this).height());
+      if (h_block > mh1) {
+        mh1 = h_block;
+      }
+    });
+    $(".editable--height1").css("min-height", mh1);
+
+    var mh2 = 0;
+    $(".editable--height2").each(function() {
+      var h_block = parseInt($(this).height());
+      if (h_block > mh2) {
+        mh2 = h_block;
+      }
+    });
+    $(".editable--height2").css("min-height", mh2);
+  });
+
   // FILTER REMOVE CLASS IS ACTIVE WHEN FOCUS ANOTHER ELEMENT
 
   _document.on("click", function(e) {

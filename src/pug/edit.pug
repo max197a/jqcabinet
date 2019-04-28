@@ -123,7 +123,7 @@ block content
         .edit-page__pa-grid
           .edit-page__pa-left
             form(action="#")
-              .edit-page__pa-item(style="min-height: 418px;")
+              .edit-page__pa-item.editable--height1
                 p.edit-page__types-title.edit-page__border Продажа
                 .edit-page__pa-row
                   .edit-page__pa-flex.edit-page__pa-flex--select
@@ -161,7 +161,7 @@ block content
                       label Возможна рассрочка
                         input(type='checkbox')
                         span.checkmark
-              .edit-page__pa-item(style="min-height: 228px;")
+              .edit-page__pa-item.editable--height2
                 p.edit-page__types-title.edit-page__border Комиссия
                 .edit-page__pa-row
                   p С собственника
@@ -222,7 +222,7 @@ block content
                 input.btn(type="submit", value="Сохранить")
           .edit-page__pa-right
             form(action="#")
-              .edit-page__pa-item(style="min-height: 418px;")
+              .edit-page__pa-item.editable--height1
                 p.edit-page__types-title.edit-page__border Аренда
                 .edit-page__pa-row
                   .edit-page__pa-flex.edit-page__pa-flex--select
@@ -295,7 +295,7 @@ block content
                       label Коммунальные платежи включены
                         input(type='checkbox')
                         span.checkmark
-              .edit-page__pa-item(style="min-height: 228px;")
+              .edit-page__pa-item.editable--height2
                 p.edit-page__types-title.edit-page__border Комиссия
                 .edit-page__pa-row
                   p С собственника
@@ -1274,3 +1274,252 @@ block content
           
 
       // блок Фотографии конец
+
+      // блок Видео начало
+
+      .edit-page__area
+        form(action="#")
+          p.edit-page__types-title.edit-page__border Видео
+          .edit-page__video
+            p.edit-page__types-title Слайд-шоу
+            .edit-page__video-grid
+              .edit-page__video-item.edit-page__video-item--buttons
+                a.btn(href="#") Скачать
+                a.btn.btn--plus(href="#")
+                  span Добавить
+                    span.plus
+              .edit-page__video-item
+                .input-container
+                  input(type="text", name="" value="https://www.jqestete.com/upload/video/id18345.mpg")
+              .edit-page__video-item
+                p Ссылка на видео youtube.com
+                .input-container
+                  input(type="text", name="")
+          .edit-page__button
+            input.btn(type="submit", value="Сохранить")
+            .edit-page__button-radio
+              .input-checkbox--radio
+                label и продолжить редактирование
+                  input(type='radio' name="group2")
+                  span.checkmark
+              .input-checkbox--radio
+                label перейти в список
+                  input(type='radio' name="group2")
+                  span.checkmark
+              .input-checkbox--radio
+                label добавить ещё 1 объект
+                  input(type='radio' name="group2")
+                  span.checkmark
+          
+      // блок Видео конец
+
+      // блок Контакты начало
+
+      .edit-page__area
+        p.edit-page__types-title.edit-page__border Контакты
+        .edit-page__contacts
+          .edit-page__contacts-item
+            p.title.title--red Константинопольский Константин Константинович
+            .edit-page__contacts-info
+              p +7 986 123-45-67
+              p +7 903 123-45-67
+              a(href="#") kostakosta@mail.ru
+              p.status Собственник
+            a(href="#") редактировать
+          .edit-page__contacts-item
+            p.title Валерий
+            .edit-page__contacts-info
+              p +7 986 123-45-67
+              p.status Строитель, супервайзер (персонал)
+            a(href="#") редактировать
+          
+          
+      // блок Контакты конец
+
+      // блок Контакты начало
+
+      .edit-page__area
+        form(action="#")
+          p.edit-page__types-title.edit-page__border Добавить контакт
+          .edit-page__add-contact
+            .edit-page__add-contact--full
+              p Выбрать из имеющихся
+              .input-container
+                input(type="text", name="")
+              p или создать и прикрепить к объекту новый контакт
+            .edit-page__add-contact-grid
+              .edit-page__add-contact-item
+                .edit-page__add-contact-row
+                  p Фамилия
+                  .input-container
+                    input(type="text", name="")
+                .edit-page__add-contact-row
+                  p Имя
+                  .input-container
+                    input(type="text", name="")
+                .edit-page__add-contact-row
+                  p Отчество
+                  .input-container
+                    input(type="text", name="")
+              .edit-page__add-contact-item
+                .edit-page__add-contact-row
+                  p Мобильный телефон
+                  .input-container
+                    input(type="text", name="")
+                .edit-page__add-contact-row
+                  p Рабочий телефон
+                  .input-container
+                    input(type="text", name="")
+                .edit-page__add-contact-row
+                  p Электронная телефон
+                  .input-container
+                    input(type="text", name="")
+              .edit-page__add-contact-item
+                .edit-page__add-contact-row
+                  p Тип контакта
+                  select
+                    option(value="val1") Тип #1
+                    option(value="val2") Тип #2
+                    option(value="val3") Тип #3
+                    option(value="val4") Тип #4
+                .edit-page__add-contact-row
+                  p Предпочтительный способ связи
+                  select
+                    option(value="val1") Способ #1
+                    option(value="val2") Способ #2
+                    option(value="val3") Способ #3
+                    option(value="val4") Способ #4
+                .edit-page__add-contact-row
+                  p Дата рождения
+                  .input-container
+                    input(type="text", name="")
+          .edit-page__button
+            input.btn(type="submit", value="Сохранить")
+            .edit-page__button-radio
+              .input-checkbox--radio
+                label и продолжить редактирование
+                  input(type='radio' name="group2")
+                  span.checkmark
+              .input-checkbox--radio
+                label перейти в список
+                  input(type='radio' name="group2")
+                  span.checkmark
+              .input-checkbox--radio
+                label добавить ещё 1 объект
+                  input(type='radio' name="group2")
+                  span.checkmark
+
+      // блок Контакты конец
+
+      // блок Ответственные начало
+
+      .edit-page__area
+        form(action="#")
+          p.edit-page__types-title.edit-page__border Ответственные
+          .edit-page__add-contact
+            .edit-page__add-contact-grid
+              .edit-page__add-contact-item
+                p Принёс контакт
+                select
+                  option(value="val1") Способ #1
+                  option(value="val2") Способ #2
+                  option(value="val3") Способ #3
+                  option(value="val4") Способ #4
+
+              .edit-page__add-contact-item
+                p Принёс контакт
+                select
+                  option(value="val1") Способ #1
+                  option(value="val2") Способ #2
+                  option(value="val3") Способ #3
+                  option(value="val4") Способ #4
+
+              .edit-page__add-contact-item
+                // пустой блок нужно оставить для одинаковой сетки с верхним блоком контакты
+            
+          .edit-page__button
+            input.btn(type="submit", value="Сохранить")
+            .edit-page__button-radio
+              .input-checkbox--radio
+                label и продолжить редактирование
+                  input(type='radio' name="group2")
+                  span.checkmark
+              .input-checkbox--radio
+                label перейти в список
+                  input(type='radio' name="group2")
+                  span.checkmark
+              .input-checkbox--radio
+                label добавить ещё 1 объект
+                  input(type='radio' name="group2")
+                  span.checkmark
+
+      // блок Ответственные конец
+
+      // блок Комментарии начало
+
+      .edit-page__area
+        p.edit-page__types-title.edit-page__border Комментарии
+        .edit-page__comments
+          .edit-page__comments-item
+            .edit-page__comments-name
+              .edit-page__comments-image
+                img(src="img/icon-mess.png", alt="")
+              .edit-page__comments-info
+                p.name Татьяна Македонова
+                p.date 27.03.2019 10:45
+            .edit-page__comments-content
+              p Объект актуализировала, новая цена 4 500 000
+          .edit-page__comments-item
+            .edit-page__comments-name
+              .edit-page__comments-image
+                img(src="img/icon-mess.png", alt="")
+              .edit-page__comments-info
+                p.name Павел Бондаренко
+                p.date 27.03.2019 10:45
+            .edit-page__comments-content
+              p Все данные для внесения объекта передал
+          form(action="#")
+            .edit-page__comments-form
+              .input-container
+                //- input(type="text", name="" placeholder="Текст комментария")
+                textarea(row="1" placeholder="Текст комментария")
+              input.btn(type="submit", value="Добавить")
+        
+      // блок Комментарии конец
+
+      // блок История коммента начало
+
+      .edit-page__area
+        .edit-page__objects
+          .edit-page__objects-item
+            p Объект создан:
+            .edit-page__objects-name
+              p.name Татьяна Македонова
+              p.date 27.03.2019 10:45
+          .edit-page__objects-item
+            p Объект изменён:
+            .edit-page__objects-name
+              p.name Татьяна Македонова
+              p.date 27.03.2019 10:45
+          .edit-page__objects-item
+            p Фотографии изменены:
+            .edit-page__objects-name
+              p.name Татьяна Македонова
+              p.date 27.03.2019 10:45
+          .edit-page__objects-item
+            p Стоимость продажи изменена:
+            .edit-page__objects-name
+              p.name Татьяна Македонова
+              p.date 27.03.2019 10:45
+          .edit-page__objects-item
+            p Стоимость аренда изменена:
+            .edit-page__objects-name
+              p.name Татьяна Македонова
+              p.date 27.03.2019 10:45
+          .edit-page__objects-item
+            p Статус изменён:
+            .edit-page__objects-name
+              p.name Татьяна Македонова
+              p.date 27.03.2019 10:45
+          
+      // блок История коммента конец
