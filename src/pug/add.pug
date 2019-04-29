@@ -1,0 +1,67 @@
+---
+title: jq-cabinet
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: main
+  section
+    .container
+      .add-page
+        .add-page__head
+          h2 Редактирование объекта:
+          h2 Дом в Сады Майендорф, б/н — ID 19567
+        form(action="#")
+          .add-page__types
+            p.add-page__types-title Тип объекта
+            .input-checkbox--radio
+              label Дом
+                input(type='radio' name="group1")
+                span.checkmark
+            .input-checkbox--radio
+              label Участок
+                input(type='radio' name="group1")
+                span.checkmark
+            .input-checkbox--radio
+              label Таунхаус
+                input(type='radio' name="group1")
+                span.checkmark
+            .input-checkbox--radio
+              label Квартира
+                input(type='radio' name="group1")
+                span.checkmark
+            .input-checkbox--radio
+              label Офис
+                input(type='radio' name="group1")
+                span.checkmark
+          .add-page__content
+            p.add-page__types-title Локация
+          .add-page__grid
+            .add-page__left
+              .add-page__left-row
+                p Посёлок
+                select
+                  option(value="val1") Поселок №1
+                  option(value="val1") Поселок №2
+                  option(value="val1") Поселок №3
+                  option(value="val1") Поселок №4
+              .add-page__left-row
+                p Улица
+                .input-container
+                  input(type="text", name="")
+              .add-page__left-row
+                p № дома / участка
+                .input-container
+                  input(type="text", name="")
+              
+              input.btn(type="submit", value="Продолжить")
+              
+            .add-page__map
+              .add-page__map-info
+                p Точное расположение на карте
+                .add-page__map-left
+                  p Долгота:
+                    span 37,3019104000
+                  p Широта:
+                    span  55,7892380000
+              img(src="img/mapjq.jpg", alt="")

@@ -7,3 +7,5 @@ PageList:
   ready: 80
 - file: main.html
   ready: 80
+- file: add.html
+  ready: 80
