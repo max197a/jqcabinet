@@ -1,0 +1,165 @@
+
+/* STYLES NEW PAGE MAIN */
+  
+.page-main
+  &__grid
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    padding-top: 86px
+  &__item
+    max-width: 366px
+    width: 32%
+    display: flex
+    flex-direction: column
+    a
+      color: $colorRed
+      font-size: 15px
+  &__icon
+    font-size: 0
+    img
+      height: 45px
+      width: auto
+  &__title
+    font-size: 26px
+    text-transform: uppercase
+    letter-spacing: 1px
+    color: #000
+    font-weight: 700
+    margin: 25px 0 71px
+  &__list
+    display: flex
+    flex-direction: column
+    &-item
+      width: auto
+      position: relative
+      padding-left: 35px
+      margin-bottom: 19px
+      &:last-child
+        margin-bottom: 0
+      &:before
+        content: ''
+        display: block
+        width: 15px
+        height: 1px
+        background: #cccccc
+        position: absolute
+        left: 0
+        top: 7px
+  &__base
+    position: relative
+    padding-left: 30px
+    span.kv
+      position: absolute
+      width: 5px
+      height: 5px
+      background: $colorRed
+      &:nth-child(1)
+        left: 4px
+        top: 4px
+      &:nth-child(2)
+        right: 4px
+        top: 4px
+      &:nth-child(3)
+        left: 4px
+        bottom: 4px
+      &:nth-child(4)
+        right: 4px
+        bottom: 4px
+  &__add
+    position: relative
+    padding-left: 30px
+    span.plus
+      position: absolute
+      top: 4px
+      left: 5px
+      width: 10px
+      height: 10px
+      &:before
+        position: absolute
+        width: 10px
+        height: 1px
+        display: block
+        content: ''
+        background: $colorRed
+        top: 5px
+      &:after
+        position: absolute
+        width: 10px
+        height: 1px
+        display: block
+        content: ''
+        background: $colorRed
+        left: 0
+        top: 5px
+        transform: rotate(90deg)
+  span.border
+    position: absolute
+    width: 21px
+    height: 21px
+    border: 1px solid $colorRed
+    border-radius: 3px
+    left: 0
+    top: -2px
+  &__row
+    margin-top: 52px
+    p
+      margin-top: 28px
+      padding-bottom: 6px
+    &-form
+      display: flex
+      .input-container
+        width: 100%
+      .btn
+        background: #00c853
+        border-color: #00c853
+        width: 100%
+        border-radius: 4px
+        font-size: 14px
+        padding: 12px
+        line-height: 1
+        cursor: pointer
+        width: 100%
+        margin-bottom: 0
+        position: relative
+        &:hover
+          background: #00b44b
+          border-color: #00b44b
+      .input-button
+        max-width: 41px
+        width: 100%
+        position: relative
+        margin-left: 10px
+        &:after
+          display: block
+          position: absolute
+          content: ''
+          width: 6px
+          height: 6px
+          border: 3px solid #fff
+          top: 50%
+          left: 47%
+          transform: translate(-50%, -50%) rotate(-45deg)
+          border-top: none
+          border-left: none
+          z-index: 2
+
++r($tablet)
+  .page-main
+    &__grid
+      justify-content: flex-start
+      flex-direction: column
+      padding-top: 20px
+    &__item
+      max-width: 100%
+      width: 100%
+      border-bottom: 1px solid #cccccc
+      padding-bottom: 30px
+      margin-top: 30px
+      &:last-child
+        border-bottom: none
+        padding-bottom: 0
+    &__row
+      margin-top: 25px
+    &__title
+      margin-bottom: 25px

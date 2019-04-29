@@ -1,0 +1,63 @@
+---
+title: jq-cabinet
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: main
+  section
+    .container
+      .page-main
+        .page-main__grid
+          .page-main__item
+            .page-main__icon
+              img(src="img/icon-main-house.svg", alt="")
+            p.page-main__title Объекты
+            a.page-main__base(href="#") База объектов
+              span.border
+                span.kv
+                span.kv
+                span.kv
+                span.kv
+            .page-main__row
+              form(action="#")
+                a.page-main__add(href="#") Добавить объект
+                  span.border
+                    span.plus
+                p Редактировать объект, ID
+                .page-main__row-form
+                  .input-container
+                    input(type="text", name="")
+                  .input-button
+                    input.btn(type="submit", value="")
+            .page-main__row
+              form(action="#")
+                a.page-main__add(href="#") Добавить посёлок
+                  span.border
+                    span.plus
+                p Редактировать посёлок
+                .page-main__row-form
+                  .input-container
+                    select
+                      option(value="val1") Посёлок #1
+                      option(value="val2") Посёлок #2
+                      option(value="val3") Посёлок #3
+                      option(value="val4") Посёлок #4
+                  .input-button
+                    input.btn(type="submit", value="")
+
+          .page-main__item
+            .page-main__icon
+              img(src="img/icon-main-rate.svg", alt="")
+            p.page-main__title отчёты
+            .page-main__list
+              a.page-main__list-item(href="#") Последние добавленные объекты
+              a.page-main__list-item(href="#") Изменение цены на 20% и более
+          .page-main__item
+            .page-main__icon
+              img(src="img/icon-main-docs.svg", alt="")
+            p.page-main__title документы
+            .page-main__list
+              a.page-main__list-item(href="#") График дежурств
+              a.page-main__list-item(href="#") Регламент звонков
+              a.page-main__list-item(href="#") Локации размещения баннеров

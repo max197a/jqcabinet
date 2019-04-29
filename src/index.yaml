@@ -4,4 +4,6 @@ PageList:
 - file: homepage.html
   ready: 80
 - file: edit.html
-  ready: 20
+  ready: 80
+- file: main.html
+  ready: 80
