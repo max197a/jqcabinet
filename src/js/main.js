@@ -102,6 +102,17 @@ $(document).ready(function() {
     $(".editable--height2").css("min-height", mh2);
   });
 
+  $(document).on("change", ".file-upload-field", function() {
+    $(this)
+      .parent(".btn")
+      .attr(
+        "data-text",
+        $(this)
+          .val()
+          .replace(/.*(\/|\\)/, "")
+      );
+  });
+
   // FILTER REMOVE CLASS IS ACTIVE WHEN FOCUS ANOTHER ELEMENT
 
   _document.on("click", function(e) {
